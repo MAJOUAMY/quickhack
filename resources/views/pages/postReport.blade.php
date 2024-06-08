@@ -1,15 +1,15 @@
 @extends('layouts.app')
 @section('main')
     <!-- Page Title Start -->
-    <section class="page-title title-bg13">
+    <section class="page-title title-bg3">
         <div class="d-table">
             <div class="d-table-cell">
-                <h2>Sign Up</h2>
+                <h2>Post a Job</h2>
                 <ul>
                     <li>
                         <a href="/">Home</a>
                     </li>
-                    <li>Sign Up</li>
+                    <li>Post a Report</li>
                 </ul>
             </div>
         </div>
