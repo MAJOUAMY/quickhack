@@ -1,4 +1,4 @@
 @extends('admin.layouts.app')
 @section('main')
-    salam
+    WELCOME ADMIN 
 @endsection
