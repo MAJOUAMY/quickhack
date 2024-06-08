@@ -1,5 +1,25 @@
 @extends('layouts.app')
 @section('main')
+!-- Page Title Start -->
+<section class="page-title title-bg1">
+    <div class="d-table">
+        <div class="d-table-cell">
+            <h2>About Us</h2>
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>About Us</li>
+            </ul>
+        </div>
+    </div>
+    <div class="lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+</section>
+<!-- Page Title End -->
     <!-- About Section Start -->
     <section class="about-section ptb-100">
         <div class="container">
