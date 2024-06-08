@@ -34,7 +34,7 @@ class AuthenticatedSessionController extends Controller
         }elseif($request->user()->role === "commune"){
             $url = "commune/dashboard";
         }else{
-            $url = "/";  
+            $url = "dashboard";  
         }
 
         return redirect()->intended($url);

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Report;
 use App\Http\Requests\StoreReportRequest;
 use App\Http\Requests\UpdateReportRequest;
+use App\Models\User;
 
 class ReportController extends Controller
 {
@@ -21,15 +22,27 @@ class ReportController extends Controller
      */
     public function create()
     {
-        return view('pages.postReport');
+        $communes = User::where("commune", "true")->get();
+        return view('pages.postReport')->with(["communes" => $communes]);
     }
 
     /**
      * Store a newly created resource in storage.
      */
     public function store(StoreReportRequest $request)
-    {
-        //
+
+    {   
+
+        Report::create([
+            "title" => $request->title,
+            "commune"=>$request->commune,
+            "quartie"=>$request->quartie,
+            "localisation"=>$request->localisation,
+            "categorie"=>$request->categorie,
+            "description"=>$request->description,
+            
+        ]);
+        return redirect()->back()->with("success","report added");
     }
 
     /**

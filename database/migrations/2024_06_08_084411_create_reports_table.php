@@ -13,6 +13,16 @@ return new class extends Migration
     {
         Schema::create('reports', function (Blueprint $table) {
             $table->id();
+            $table->string("title");
+            $table->string("quartie");
+            $table->string("localisation");
+            $table->string("description");
+            $table->string("categorie");
+            $table->string("image")->nullable();
+            $table->integer("commune");
+            
+            
+
             $table->timestamps();
         });
     }
