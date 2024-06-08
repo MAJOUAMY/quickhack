@@ -1,7 +1,9 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CommuneController;
+use App\Http\Controllers\ProfileController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -16,5 +18,14 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+//admin routes
+Route::middleware(['auth','role:admin'])->group(function () {
+    Route::get('/admin/dashboard',[AdminController::class,'dashboard'])->name('admin.dashboard');
+});
 
+
+//agent routes
+Route::middleware(['auth','role:commune'])->group(function () {
+    Route::get('/commune/dashboard',[CommuneController::class,'dashboard'])->name('commune.dashboard');
+});
 require __DIR__.'/auth.php';
