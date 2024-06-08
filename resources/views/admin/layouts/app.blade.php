@@ -258,13 +258,13 @@
 <aside id="leftsidebar" class="sidebar">
     <div class="navbar-brand">
         <button class="btn-menu ls-toggle-btn" type="button"><i class="zmdi zmdi-menu"></i></button>
-        <a href="index.html"><img src="assets/images/logo.svg" width="25" alt="Aero"><span class="m-l-10">Aero</span></a>
+        <a href="index.html"><img src="{{ asset("assetss/images/logo.svg") }}" width="25" alt="Aero"><span class="m-l-10">Aero</span></a>
     </div>
     <div class="menu">
         <ul class="list">
             <li>
                 <div class="user-info">
-                    <a class="image" href="profile.html"><img src="assets/images/profile_av.jpg" alt="User"></a>
+                    {{-- <a class="image" href="profile.html"><img src="assets/images/profile_av.jpg" alt="User"></a> --}}
                     <div class="detail">
                         <h4>Michael</h4>
                         <small>Super Admin</small>                        
@@ -274,8 +274,8 @@
             <li class="active open"><a href="/"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>
             <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-apps"></i><span>Commune</span></a>
                 <ul class="ml-menu">
-                    <li><a href="mail-inbox.html">Ajouter Commune</a></li>
-                    <li><a href="chat.html">view Communs</a></li>                   
+                    <li><a href="{{ route("ajouterCommune") }}">Ajouter Commune</a></li>
+                    <li><a href="/admin/dashboard/commune">view Communs</a></li>                   
                 </ul>
             </li>
             <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-assignment"></i><span>Reports</span></a>
@@ -288,7 +288,7 @@
             </li>                       
             <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-lock"></i><span>Authentication</span></a>
                 <ul class="ml-menu">
-                    <li><a href="sign-in.html">Log Out</a></li>
+                    <li><a href="{{ route("logout") }}">Log Out</a></li>
                     {{-- <li><a href="sign-up.html">Sign Up</a></li>
                     <li><a href="forgot-password.html">Forgot Password</a></li>
                     <li><a href="404.html">Page 404</a></li>
@@ -297,13 +297,7 @@
                     <li><a href="locked.html">Locked Screen</a></li> --}}
                 </ul>
             </li>
-            <li class="open_top"><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-map"></i><span>Maps</span></a>
-                <ul class="ml-menu">
-                    <li><a href="google.html">Google Map</a></li>
-                    <li><a href="yandex.html">YandexMap</a></li>
-                    <li><a href="jvectormap.html">jVectorMap</a></li>
-                </ul>
-            </li>
+            
         </ul>
     </div>
 </aside>
@@ -459,21 +453,7 @@
 
 <section class="content">
     <div class="">
-        <div class="block-header">
-            <div class="row">
-                <div class="col-lg-7 col-md-6 col-sm-12">
-                    <h2>Dashboard</h2>
-                    <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Aero</a></li>
-                        <li class="breadcrumb-item active">Dashboard 1</li>
-                    </ul>
-                    <button class="btn btn-primary btn-icon mobile_menu" type="button"><i class="zmdi zmdi-sort-amount-desc"></i></button>
-                </div>
-                <div class="col-lg-5 col-md-6 col-sm-12">                
-                    <button class="btn btn-primary btn-icon float-right right_icon_toggle_btn" type="button"><i class="zmdi zmdi-arrow-right"></i></button>
-                </div>
-            </div>
-        </div>
+        
        @yield('main')
     </div>
 </section>
@@ -481,7 +461,8 @@
 
     
     <!-- Jquery Core Js --> 
-    <script src="{{ asset('assetss/bundles/libscripts.bundle.js') }}"></script> <!-- Lib Scripts Plugin Js (jquery.v3.2.1, Bootstrap4 js) --> 
+    <script src="{{ asset('assetss/bundles/libscripts.bundle.js') }}"></script> <!-- Lib Scripts Plugin Js (jquery.v3.2.1, Bootstrap4 js) -->
+    {{-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>   --}}
     <script src="{{ asset('assetss/bundles/vendorscripts.bundle.js') }}"></script> <!-- slimscroll, waves Scripts Plugin Js -->
 
     <script src="{{ asset('assetss/bundles/jvectormap.bundle.js') }}"></script> <!-- JVectorMap Plugin Js -->

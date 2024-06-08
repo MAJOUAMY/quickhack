@@ -1,26 +1,27 @@
 @extends('admin.layouts.app')
 @section('main')
 <h2 class="card-inside-title">Ajouter Commune</h2>
-<form action="">
+<form action="/storeCommune" method="POST">
     @csrf
     <div class="row clearfix">
         <div class="col-sm-5">
             <div class="form-group">                                    
-                <input type="text" class="form-control" placeholder="email" />                                   
+                <input name="email" type="text" class="form-control" placeholder="email" />                                   
             </div>
         </div>
         <div class="col-sm-5">
             <div class="form-group">                                   
-                <input type="password" class="form-control" placeholder="mot de passe" />                                    
+                <input name="password" type="password" class="form-control" placeholder="mot de passe" />                                    
             </div>
         </div>
         <div class="col-sm-4">
             <div class="form-group">                                   
-                <input type="text" class="form-control" placeholder="nom de commune" />                                    
+                <input name="name" type="text" class="form-control" placeholder="nom de commune" />                                    
             </div>
         </div>
     </div>
     <input type="hidden" name="role" value="commune">
+    <button class="btn">ajouter commune</button>
 </form>
                             {{-- <div class="row clearfix">
                                 <div class="col-sm-5">
