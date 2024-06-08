@@ -4,7 +4,7 @@
     <section class="page-title title-bg3">
         <div class="d-table">
             <div class="d-table-cell">
-                <h2>Post a Job</h2>
+                <h2>Post a Report</h2>
                 <ul>
                     <li>
                         <a href="/">Home</a>
@@ -25,13 +25,13 @@
         <div class="container">
             <form action="/addReport" method="POST" class="job-post-from">
                 @csrf
-                <h2>Fill Up Your Job information</h2>
+                <h2>Remplissez les informations concernant votre incident</h2>
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label>Title</label>
+                            <label>Titre de l'incident</label>
                             <input name="title" type="text" class="form-control" id="exampleInput1"
-                                placeholder="Job Title or Keyword" >
+                                placeholder="Titre de l'incident" >
                         </div>
                     </div>
 
@@ -40,11 +40,11 @@
                             <label>Communes</label>
                             <select name="commune" class="category">
                                 <option data-display="Commune">Commune</option>
-                                <option value="1">Web Development</option>
-                                <option value="2">Graphics Design</option>
-                                <option value="4">Data Entry</option>
-                                <option value="5">Visual Editor</option>
-                                <option value="6">Office Assistant</option>
+                                <option value="1">Commune 1</option>
+                                <option value="2">Commune 2</option>
+                                <option value="4">Commune 3</option>
+                                <option value="5">Commune 4</option>
+                                <option value="6">Commune 5</option>
                             </select>
                         </div>
                     </div>
@@ -53,13 +53,13 @@
                         <div class="form-group">
                             <label>Quartier</label>
                             <input name="quartie" type="text" class="form-control" id="exampleInput2"
-                                placeholder="Company Name" >
+                                placeholder="Quartier" >
                         </div>
                     </div>
 
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label>Add Images</label>
+                            <label>Ajouter des images</label>
                             <input name="image" type="file" class="form-control" id="exampleInput3" >
                         </div>
                     </div>
@@ -68,9 +68,9 @@
 
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label>Location</label>
+                            <label>Localisation</label>
                             <input name="localisation" type="text" class="form-control" id="exampleInput5"
-                                placeholder="e.g. London" >
+                                placeholder="Localisation" >
                         </div>
                     </div>
 
@@ -78,10 +78,12 @@
                         <div class="form-group">
                             <label>Category</label>
                             <select name="categorie" class="category">
-                                <option data-display="Category">Category</option>
-                                <option value="1">Full Time</option>
-                                <option value="2">Part Time</option>
-                                <option value="4">Freelancer</option>
+                                <option data-display="Category">Catégorie</option>
+                                        <option value="1">Voirie</option>
+                                        <option value="2">Éclairage public</option>
+                                        <option value="3">Environnement</option>
+                                        <option value="4">Sécurité</option>
+                                        <option value="5">Autre</option>
                             </select>
                         </div>
                     </div>
