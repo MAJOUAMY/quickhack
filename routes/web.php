@@ -44,4 +44,6 @@ require __DIR__ . '/auth.php';
 //post job
 Route::get("/communes", [CommuneController::class, "getPublicCommunes"]);
 Route::get("/communes/{id}", [CommuneController::class, "getOneCommuneWithReport"]);
+Route::get("/reports/{id}", [CommuneController::class, "getReportDetail"]);
 Route::view('/about', 'pages.about')->name('about');
+

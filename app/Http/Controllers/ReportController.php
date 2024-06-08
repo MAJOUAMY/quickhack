@@ -32,7 +32,7 @@ class ReportController extends Controller
     public function store(StoreReportRequest $request)
     {
         // Handle file upload
-        // $imagePath = $request->file('image')->store('images', 'public');
+        $imagePath = $request->file('image')->store('images', 'public');
         // dd($imagePath)
         // Create the report
         Report::create([
@@ -40,7 +40,7 @@ class ReportController extends Controller
             'commune' => $request->commune,
             'quartie' => $request->quartie,
             'localisation' => $request->localisation,
-            // 'image' => $imagePath,
+            'image' => $imagePath,
             'categorie' => $request->categorie,
             'description' => $request->description,
         ]);

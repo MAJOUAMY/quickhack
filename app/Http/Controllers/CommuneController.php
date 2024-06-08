@@ -14,8 +14,10 @@ class CommuneController extends Controller
     return view('commune.dashboard');
   }
   public function ajouterCommune()
-  {
-    return view("admin.pages.ajouterCommune");
+  { 
+
+    $communes=User::where("commune","true")->get();
+    return view("admin.pages.ajouterCommune")->with("communes",$communes);
   }
   public function storeCommune(Request $request)
   {
@@ -47,5 +49,8 @@ class CommuneController extends Controller
     $commune = User::with('reports')->where("id", $id);
     dd($commune);
     return view("pages.commune_details");
+  }
+  public function getReportDetail(){
+    return view("pages.reports");
   }
 }

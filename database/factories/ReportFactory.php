@@ -21,7 +21,7 @@ class ReportFactory extends Factory
             'categorie' => $this->faker->word,
             'image' => "",
             'quartie' => $this->faker->citySuffix,
-            'commune' => $this->faker->city,
+            'commune' => 1,
             'description' => $this->faker->paragraph,
             'localisation' => $this->faker->address,
             'status' => $this->faker->randomElement(['pending', 'approved', 'rejected']),
