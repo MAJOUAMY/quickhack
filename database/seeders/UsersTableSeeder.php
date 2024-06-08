@@ -27,6 +27,7 @@ class UsersTableSeeder extends Seeder
             [
                 'name' =>  'commune',
                 'email' => 'commune@gmail.com',
+                // 'commune'=>"true",
                 'password' => Hash::make('password'),
                 'role' => 'commune',
             ],

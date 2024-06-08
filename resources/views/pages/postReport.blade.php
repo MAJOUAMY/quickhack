@@ -75,7 +75,7 @@
                         </div>
                     </div>
 
-                    {{-- <div class="col-md-6">
+                    <div class="col-md-6">
                         <div class="form-group">
                             <label>Job Type</label>
                             <select class="category">
@@ -85,7 +85,7 @@
                                 <option value="4">Freelancer</option>
                             </select>
                         </div>
-                    </div> --}}
+                    </div>
 
                     {{-- <div class="col-md-6">
                         <div class="form-group">

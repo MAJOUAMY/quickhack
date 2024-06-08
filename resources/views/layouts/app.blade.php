@@ -91,7 +91,7 @@
                                     <a href="about.html" class="nav-link">About</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link ">Post a Report</a>
+                                    <a href="{{ route("postReport") }}" class="nav-link ">Post a Report</a>
                                 </li>                
                                 <li class="nav-item">
                                     <a href="#" class="nav-link ">Communes</a>
