@@ -1,50 +1,51 @@
 <!doctype html>
 <html lang="zxx">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
-        
-        <!-- Owl Carousel CSS -->
-        <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.min.css') }}">
-        
-        <!-- Owl Carousel Theme Default CSS -->
-        <link rel="stylesheet" href="{{ asset('assets/css/owl.theme.default.min.css') }}">
-        
-        <!-- Box Icon CSS -->
-        <link rel="stylesheet" href="{{ asset('assets/css/boxicon.min.css') }}">
-        
-        <!-- Flaticon CSS -->
-        <link rel="stylesheet" href="{{ asset('assets/fonts/flaticon/flaticon.css') }}">
-        
-        <!-- Meanmenu CSS -->
-        <link rel="stylesheet" href="{{ asset('assets/css/meanmenu.css') }}">
-        
-        <!-- Nice Select CSS -->
-        <link rel="stylesheet" href="{{ asset('assets/css/nice-select.css') }}">
-        
-        <!-- Style CSS -->
-        <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-        
-        <!-- Dark CSS -->
-        <link rel="stylesheet" href="{{ asset('assets/css/dark.css') }}">
-        
-        <!-- Responsive CSS -->
-        <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
-        
-        <!-- Title -->
-        <title>Jovie - Job Board & Portal HTML Template</title>
-        
-        <!-- Favicon -->
-        <link rel="icon" type="image/png" href="{{ asset('assets/img/favicon.png') }}">
-    </head>
-    
-    <body>
-        <!-- Pre-loader Start -->
-        {{-- <div class="loader-content">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.min.css') }}">
+
+    <!-- Owl Carousel Theme Default CSS -->
+    <link rel="stylesheet" href="{{ asset('assets/css/owl.theme.default.min.css') }}">
+
+    <!-- Box Icon CSS -->
+    <link rel="stylesheet" href="{{ asset('assets/css/boxicon.min.css') }}">
+
+    <!-- Flaticon CSS -->
+    <link rel="stylesheet" href="{{ asset('assets/fonts/flaticon/flaticon.css') }}">
+
+    <!-- Meanmenu CSS -->
+    <link rel="stylesheet" href="{{ asset('assets/css/meanmenu.css') }}">
+
+    <!-- Nice Select CSS -->
+    <link rel="stylesheet" href="{{ asset('assets/css/nice-select.css') }}">
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+
+    <!-- Dark CSS -->
+    <link rel="stylesheet" href="{{ asset('assets/css/dark.css') }}">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
+
+    <!-- Title -->
+    <title>Jovie - Job Board & Portal HTML Template</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ asset('assets/logo.png') }}">
+</head>
+
+<body>
+    <!-- Pre-loader Start -->
+    {{-- <div class="loader-content">
             <div class="d-table">
                 <div class="d-table-cell">
                     <div class="sk-circle">
@@ -64,54 +65,55 @@
                 </div>
             </div>
         </div> --}}
-        <!-- Pre-loader End -->
+    <!-- Pre-loader End -->
 
-        <!-- Navbar Area Start -->
-        <div class="navbar-area">
-            <!-- Menu For Mobile Device -->
-            <div class="mobile-nav">
-                <a href="index.html" class="logo">
-                    <img src="{{ asset('assets/img/logo.png') }}" alt="logo">
-                </a>
-            </div>
-        
-            <!-- Menu For Desktop Device -->
-            <div class="main-nav">
-                <div class="container">
-                    <nav class="navbar navbar-expand-lg navbar-light">
-                        <a class="navbar-brand" href="index.html">
-                            <img src="{{ asset('assets/img/logo.png') }}" alt="logo">
-                        </a>
-                        <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
-                            <ul class="navbar-nav m-auto">
-                                <li class="nav-item">
-                                    <a href="/" class="nav-link  ">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="about.html" class="nav-link">About</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="{{ route("postReport") }}" class="nav-link ">Post a Report</a>
-                                </li>                
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link ">Communes</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="contact.html" class="nav-link">Contact Us</a>
-                                </li>
-                            </ul>
+    <!-- Navbar Area Start -->
+    <div class="navbar-area">
+        <!-- Menu For Mobile Device -->
+        <div class="mobile-nav">
+            <a href="index.html" class="logo">
+                <img src="{{ asset('/logo.png') }}" alt="logo">
+            </a>
+        </div>
 
-                            <div class="other-option">
-                                <a href="{{ route("register") }}" class="signup-btn">Sign Up</a>
-                                <a href="{{ route("login") }}" class="signin-btn">Sign In</a>
-                            </div>
+        <!-- Menu For Desktop Device -->
+        <div class="main-nav">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="{{ asset('assets/img/logo.png') }}" alt="logo">
+                    </a>
+                    <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                        <ul class="navbar-nav m-auto">
+                            <li class="nav-item">
+                                <a href="/" class="nav-link  ">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('about') }}" class="nav-link">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('postReport') }}" class="nav-link ">Post a Report</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/communes" class="nav-link ">Communes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="contact.html" class="nav-link">Contact Us</a>
+                            </li>
+                        </ul>
+
+                        <div class="other-option">
+                            <a href="{{ route('register') }}" class="signup-btn">Sign Up</a>
+                            <a href="{{ route('login') }}" class="signin-btn">Sign In</a>
                         </div>
-                    </nav>
-                </div>
+                    </div>
+                </nav>
             </div>
         </div>
-        <!-- Navbar Area End -->
-    </body>
+    </div>
+    <!-- Navbar Area End -->
+</body>
+
 </html>
 
 @yield('main')
@@ -127,7 +129,8 @@
                         </a>
                     </div>
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore magna. Sed eiusmod tempor incididunt ut.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore
+                        et dolore magna. Sed eiusmod tempor incididunt ut.</p>
 
                     <div class="footer-social">
                         <a href="#" target="_blank"><i class='bx bxl-facebook'></i></a>
@@ -193,7 +196,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="about.html">
+                            <a href="{{ route('about') }}">
                                 <i class='bx bx-chevrons-right bx-tada'></i>
                                 About
                             </a>
@@ -275,7 +278,7 @@
 <!-- Back To Top End -->
 
 <!-- jQuery first, then Bootstrap JS -->
-{{-- <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+<script src="{{ asset('assets/js/jquery.min.js') }}"></script>
 <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
 <!-- Owl Carousel JS -->
 <script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
@@ -292,6 +295,7 @@
 <!-- Meanmenu JS -->
 <script src="{{ asset('assets/js/meanmenu.js') }}"></script>
 <!-- Custom JS -->
-<script src="{{ asset('assets/js/custom.js') }}"></script> --}}
+<script src="{{ asset('assets/js/custom.js') }}"></script>
 </body>
+
 </html>

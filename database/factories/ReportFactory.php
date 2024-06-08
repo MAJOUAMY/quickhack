@@ -17,7 +17,15 @@ class ReportFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'title' => $this->faker->sentence,
+            'categorie' => $this->faker->word,
+            'image' => "",
+            'quartie' => $this->faker->citySuffix,
+            'commune' => $this->faker->city,
+            'description' => $this->faker->paragraph,
+            'localisation' => $this->faker->address,
+            'status' => $this->faker->randomElement(['pending', 'approved', 'rejected']),
+
         ];
     }
 }

@@ -36,4 +36,16 @@ class CommuneController extends Controller
     $reports = Report::get();
     return view("commune.pages.reports")->with("reports", $reports);
   }
+  public function getPublicCommunes()
+  {
+
+    $communes = User::where("commune", "true")->get();
+    return view("pages.commune")->with("communes", $communes);
+  }
+  public function getOneCommuneWithReport($id)
+  {
+    $commune = User::with('reports')->where("id", $id);
+    dd($commune);
+    return view("pages.commune_details");
+  }
 }

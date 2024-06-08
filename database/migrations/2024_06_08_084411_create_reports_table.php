@@ -18,10 +18,11 @@ return new class extends Migration
             $table->string("localisation");
             $table->string("description");
             $table->string("categorie");
-            $table->string("image")->nullable();
+            $table->string("image");
+            $table->string("status")->default("non_valide");
             $table->integer("commune");
-            
-            
+
+
 
             $table->timestamps();
         });

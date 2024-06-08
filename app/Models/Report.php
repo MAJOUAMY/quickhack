@@ -15,7 +15,8 @@ class Report extends Model
         "quartie",
         "commune",
         "description",
-        "localisation"
+        "localisation",
+        'status'
     ];
 
     public function user()

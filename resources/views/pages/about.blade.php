@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('main')
-!-- Page Title Start -->
+
 <section class="page-title title-bg1">
     <div class="d-table">
         <div class="d-table-cell">
