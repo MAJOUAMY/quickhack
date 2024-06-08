@@ -30,20 +30,25 @@ class ReportController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(StoreReportRequest $request)
-
-    {   
-
+    {
+        // Handle file upload
+        // $imagePath = $request->file('image')->store('images', 'public');
+        // dd($imagePath)
+        // Create the report
         Report::create([
-            "title" => $request->title,
-            "commune"=>$request->commune,
-            "quartie"=>$request->quartie,
-            "localisation"=>$request->localisation,
-            "categorie"=>$request->categorie,
-            "description"=>$request->description,
-            
+            'title' => $request->title,
+            'commune' => $request->commune,
+            'quartie' => $request->quartie,
+            'localisation' => $request->localisation,
+            // 'image' => $imagePath,
+            'categorie' => $request->categorie,
+            'description' => $request->description,
         ]);
-        return redirect()->back()->with("success","report added");
+    
+        // Redirect back with success message
+        return redirect()->back()->with('success', 'Report added successfully!');
     }
+    
 
     /**
      * Display the specified resource.

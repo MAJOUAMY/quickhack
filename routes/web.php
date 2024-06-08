@@ -36,6 +36,7 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
 //agent routes
 Route::middleware(['auth', 'role:commune'])->group(function () {
     Route::get('/commune/dashboard', [CommuneController::class, 'dashboard'])->name('commune.dashboard');
+    Route::get('/commune/dashboard/reports', [CommuneController::class, 'getReports']);
 });
 require __DIR__ . '/auth.php';
 
