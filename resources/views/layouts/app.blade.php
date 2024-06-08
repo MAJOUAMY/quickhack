@@ -44,7 +44,7 @@
     
     <body>
         <!-- Pre-loader Start -->
-        <div class="loader-content">
+        {{-- <div class="loader-content">
             <div class="d-table">
                 <div class="d-table-cell">
                     <div class="sk-circle">
@@ -63,7 +63,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- Pre-loader End -->
 
         <!-- Navbar Area Start -->
@@ -275,7 +275,7 @@
 <!-- Back To Top End -->
 
 <!-- jQuery first, then Bootstrap JS -->
-<script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+{{-- <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
 <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
 <!-- Owl Carousel JS -->
 <script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
@@ -292,6 +292,6 @@
 <!-- Meanmenu JS -->
 <script src="{{ asset('assets/js/meanmenu.js') }}"></script>
 <!-- Custom JS -->
-<script src="{{ asset('assets/js/custom.js') }}"></script>
+<script src="{{ asset('assets/js/custom.js') }}"></script> --}}
 </body>
 </html>

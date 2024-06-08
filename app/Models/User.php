@@ -31,6 +31,7 @@ class User extends Authenticatable
     public function reports(){
         return $this->hasMany(Report::class);
     }
+    
 
     protected $hidden = [
         'password',

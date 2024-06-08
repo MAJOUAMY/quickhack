@@ -8,6 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Report extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'title',
+        "categorie",
+        // "image",
+        "quartie",
+        "commune",
+        "description",
+        "localisation"
+    ];
 
     public function user()
     {
